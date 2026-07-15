@@ -1,0 +1,11 @@
+---
+applications:
+  - name: aquaguard-flood-prediction
+    memory: 512M
+    instances: 1
+    random-route: true
+    buildpacks:
+      - python_buildpack
+    command: gunicorn app:app
+    env:
+      PYTHON_VERSION: 3.10.12
